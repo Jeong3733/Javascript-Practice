@@ -1,0 +1,65 @@
+:root {
+    --clr-main: hsl(209, 61%, 16%);
+    --clr-grey: hsl(210, 36%, 96%);
+    --clr-black: #222;
+    --clr-white: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--clr-main);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr-grey);
+}
+
+main .container {
+    text-align: center;
+}
+
+main .container .title h1 {
+    font-size: 5rem;
+}
+
+main .container .value {
+    font-size: 6rem;
+    font-weight: bolder;
+}
+
+main .container .btn_container {
+    margin-top: 15px;
+}
+
+main .container .btn {
+    margin: 8px;
+    padding: 8px 20px;
+    color: var(--clr-main);
+    background-color: transparent;
+    border: 2px solid var(--clr-black);
+    border-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+main .container .btn:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+    transition: 0.3s ease-in;
+}
+
+
+
+
+
