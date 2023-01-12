@@ -1,0 +1,135 @@
+:root {
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-5: #49a6e9;
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--clr-grey-10);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.sidebar_toggle {
+    position: absolute;
+    margin: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--clr-primary-5);
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.sidebar_toggle:hover {
+    color: var(--clr-primary-7);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    width: 25em;
+    height: 100vh;
+    background-color: var(--clr-white);
+    transition: all 0.5s ease;
+    transform: translate(-100%);
+}
+
+.show_sidebar {
+    transform: translate(0);
+}
+
+.sidebar .side_header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .side_header .side_header_closeBtn {
+    font-size: 1.75rem;
+    color: var(--clr-red-dark);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar .side_header .side_header_closeBtn:hover {
+    color: var(--clr-red-light);
+    transform: rotate(1turn);
+}
+
+.sidebar .side_menu li {
+    width: 100%;
+}
+
+.sidebar .side_menu li a {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--clr-grey-5);
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar .side_menu li a:hover {
+    padding-left: 2rem;
+    background-color: var(--clr-primary-8);
+    color: var(--clr-primary-5);
+}
+
+.sidebar .side_links {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar .side_links li a i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar .side_links li a i:hover {
+    color: var(--clr-primary-1);
+    transform: scale(1.3);
+}
